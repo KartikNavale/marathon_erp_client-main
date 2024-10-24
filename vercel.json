@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/erp_home_module", "dest": "/server.js" },
+      { "src": "/erp_login_module", "dest": "/server.js" },
+      { "src": "/erp_home_module/masters", "dest": "/server.js" },
+      { "src": "/erp_home_module/erp_estimation", "dest": "/server.js" },
+
+      { "src": "/erp_event_module/", "dest": "/server.js" },
+
+
+      { "src": "/assets", "dest": "/server.js" },
+
+
+      { "src": "/(.*)", "dest": "/server.js" }
+    ]
+  }
+  
